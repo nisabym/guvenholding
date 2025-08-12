@@ -1,0 +1,519 @@
+/* Temel reset ve font ayarı */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Nav bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004d99;
+    padding: 1rem 2rem;
+}
+
+nav .logo {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav .nav-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: white;
+    max-width: 1200px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #004d99;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-text button {
+    padding: 0.75rem 1.5rem;
+    background-color: #004d99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-text button:hover {
+    background-color: #003366;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.about-us {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.about-us .container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.circular-image {
+    flex-shrink: 0; /* resmi küçültme */
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.circular-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: #004d99;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #555;
+}
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    color: #004d99;
+    margin-bottom: 20px;
+}
+
+.features p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
+/* Genel Flexbox ayarları */
+.content-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    padding: 20px;
+}
+
+.content-left, .content-right {
+    flex: 1; /* Her iki bölüm de eşit genişlikte */
+    padding: 20px;
+}
+
+.content-left img, .content-right img {
+    width: 100%; /* Görsellerin genişliği tamamen kapsar */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlık ve paragraf stilleri */
+h2 {
+    font-size: 2rem;
+    color: #004d99;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* İkinci bölümdeki sıralamayı değiştiren CSS */
+.reverse {
+    flex-direction: row-reverse; /* Görsel ve metin yer değiştirdi */
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .content-block {
+        flex-direction: column; /* Küçük ekranlarda dikey sıralama */
+    }
+
+    .reverse {
+        flex-direction: column-reverse; /* İkinci bölümde de metin ve görsel sırası değiştirilmiş olur */
+    }
+}
+/* Temel stil */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Team Section */
+.team-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    color: #004d99;
+    margin-bottom: 10px;
+}
+
+.team-section h3 {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Profile Grid */
+.profile-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+/* Profil resimleri */
+.profile-item {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .profile-item {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-item {
+        width: 100px;
+        height: 100px;
+    }
+}
+/* General Section Styling */
+.pricing-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.pricing-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.pricing-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: #777;
+}
+
+/* Card Container and Grid */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background-color: yellow;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.pricing-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pricing-card li {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Hover Effect for Cards */
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+.faq-section {
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.faq-section h3 {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.faq-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.faq-answer {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .faq-item {
+        padding: 15px;
+    }
+
+    .faq-question {
+        font-size: 18px;
+    }
+
+    .faq-answer {
+        font-size: 14px;
+    }
+}
+/* Contact Us Section */
+.contact-section {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contact-info {
+    width: 45%;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.contact-map {
+    width: 45%;
+}
+
+.contact-map iframe {
+    border-radius: 8px;
+    border: none;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-container {
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    color: #f4f4f4;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #bbb;
+}
